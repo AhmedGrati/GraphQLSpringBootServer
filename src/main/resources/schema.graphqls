@@ -1,0 +1,23 @@
+type Todo {
+    id:Int
+    title:String
+    description:String
+    duration:Int
+}
+
+type Query {
+    getAllTodos:[Todo]
+}
+
+type Mutation {
+
+    addTodo(newTodo:TodoInput): Todo
+    deleteTodoById(id:Int):Boolean
+}
+
+input TodoInput {
+        id:Int
+        title:String
+        description:String
+        duration:Int
+}
